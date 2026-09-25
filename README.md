@@ -1,6 +1,11 @@
 > [!WARNING]
 > 本仓库为维护九号2.4英寸半彩屏车型的分支仓库，如果没有大问题不会长期保持更新，如果你有需要可以前往：[Margele/NinebotEnhance](https://github.com/Margele/NinebotEnhance) 主仓库进行下载，一般情况此仓库只会同步源代码和我的测试版本，不会长期发布更新。
 
+> [!IMPORTANT]
+> [Margele](https://github.com/Margele)表示他正在开发2.4寸半彩屏的其他实现方式，本仓库内容可能后续会合并主分支。
+
+
+
 # Ninebot Enhance 九号APP增强模块
 
 九号出行的 LSPosed 模块：把手机上的任意应用投到车辆仪表，并在仪表画面上叠加手机状态、音乐、胎压、电压、速度、功率、通知等控件，把手机导航的转向信息送到仪表。
