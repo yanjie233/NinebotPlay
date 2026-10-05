@@ -2,11 +2,11 @@
 > 本仓库为维护九号2.4英寸半彩屏车型的分支仓库，如果没有大问题不会长期保持更新，如果你有需要可以前往：[Margele/NinebotEnhance](https://github.com/Margele/NinebotEnhance) 主仓库进行下载，一般情况此仓库只会同步源代码和我的测试版本，不会长期发布更新。
 
 > [!IMPORTANT]
-> [Margele](https://github.com/Margele)表示他正在开发2.4寸半彩屏的其他实现方式，本仓库内容可能后续会合并主分支。
+> [Margele/NinebotEnhance](https://github.com/Margele/NinebotEnhance)原仓库已停止更新，目前部分新代码还未同步，后续可能考虑跟进。
 
 
 
-# Ninebot Enhance 九号APP增强模块
+# Ninebot Play 九号APP增强模块
 
 九号出行的 LSPosed 模块：把手机上的任意应用投到车辆仪表，并在仪表画面上叠加手机状态、音乐、胎压、电压、速度、功率、通知等控件，把手机导航的转向信息送到仪表。
 
@@ -17,7 +17,6 @@
 - **手机导航上仪表**：高德导航时，转向箭头、剩余距离时间、当前 / 下一路名实时写到仪表的巡航画面（腾讯、百度接入中）。
 - **手机预览与输入**：虚拟显示器可以先于投屏启动并一直保留，在手机上预览、触摸、返回、输入文字；投屏随时接上或断开。
 - **编码与统计**：可覆盖编码码率和帧率；查看采集、编码、发送、丢帧和仪表反馈的实时统计。
-- **更新提示**：从 GitHub Releases 检查新版本，有更新时提示并可直接打开 Releases 页面；不自动下载。
 - **隐藏功能**：显示被车辆功能位隐藏的双向转把选项、仪表按键卡片和原版巡航入口。
 - **BMS 管理**：支持 DL / ANT / JBD / JK / 彦阳 五种保护板协议，默认自动按广播名和暴露的服务识别；DL 本地完成 secp256k1 握手，其余四种由模块直接读取，仪表上多一张最多三行、字段可选可排序的 BMS 卡片；电压、功率卡片可选 BMS 优先。
 - **大灯控制**：绑定 TX 灯控、蓝牙电调（摩灯客大灯电调）、摩灯客卷帘控制器或 SG 灯控后，仪表上多一张大灯卡片；能定位的按百分比一档一档走，SG 灯控按设定的点动时长向上或向下运行；没放音乐时音量加减键直接调灯，音量本身不变。
@@ -35,7 +34,8 @@
 | 授权 | Root、Shizuku / Sui（API 13+），或仅系统录屏 |
 
 已在 M5P（车型 14103，仪表 848×480，Wi-Fi Direct H.264）[Margele](https://github.com/Margele)实测 
-已在F2z 竖向半屏仪表（车型 未知 ，仪表 240x3220 蓝牙 MPEG2）[yanjie233](https://github.com/yanjie233)实测
+
+已在F2z 竖向半屏仪表（车型 未知 ，仪表 240x320 蓝牙 MPEG2）[yanjie233](https://github.com/yanjie233)实测
 
 Android 13（API 33）上系统没有按屏唤醒与屏幕交互查询接口，辅助进程不保持虚拟屏电源，手机熄屏后投屏可能中断；请求刷新率同样没有该接口，走系统默认。屏幕方向、副屏任务查询和剪贴板按各平台提供的接口自动降级，功能一致。
 
@@ -64,8 +64,8 @@ python scripts/build.py --sdk "$ANDROID_HOME" --jdk "$JAVA_HOME" --allow-other-s
 - 大灯是另一台设备，走模块自己申请的蓝牙权限和自己的连接，与车辆链路无关。大灯和 BMS 的链路只在九号界面可见或投屏期间保持，九号退到后台即断开，模块不在后台保持任何连接。
 - 导航 App 里只有观察钩子，不改变它们的行为。
 - 本项目不是九号官方产品。
-- 如有侵权，请联系邮箱 shirona@ichinomiya.dev 处理。
+- 如有侵权，请联系邮箱 support@7so.top 处理。
 
 ## 许可证
 
-[Apache License 2.0](LICENSE)。第三方组件及其许可证见 [第三方声明](THIRD_PARTY_NOTICES.md)；副屏方案参考 [VirtualDisplay](https://github.com/Ynkcc/VirtualDisplay)、[VirtualDisplayDaemon](https://github.com/Ynkcc/VirtualDisplayDaemon) 和 [scrcpy](https://github.com/Genymobile/scrcpy)，Shizuku / Sui 使用其 [官方 API](https://github.com/RikkaApps/Shizuku-API)。
+[Apache License 2.0](LICENSE)。第三方组件及其许可证见 [第三方声明](THIRD_PARTY_NOTICES.md)；副屏方案参考 [VirtualDisplay](https://github.com/Ynkcc/VirtualDisplay)、[VirtualDisplayDaemon](https://github.com/Ynkcc/VirtualDisplayDaemon) 和 [scrcpy](https://github.com/Genymobile/scrcpy)，Shizuku / Sui 使用其 [官方 API](https://github.com/RikkaApps/Shizuku-API)。源仓库[Margele/NinebotEnhance](https://github.com/Margele/NinebotEnhance) 
