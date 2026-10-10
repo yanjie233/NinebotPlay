@@ -1,8 +1,8 @@
-> [!WARNING]
+> [!IMPORTANT]
 > 本仓库为维护九号2.4英寸半彩屏车型的分支仓库，如果没有大问题不会长期保持更新，如果你有需要可以前往：[Margele/NinebotEnhance](https://github.com/Margele/NinebotEnhance) 主仓库进行下载，一般情况此仓库只会同步源代码和我的测试版本，不会长期发布更新。
 
-> [!IMPORTANT]
-> [Margele/NinebotEnhance](https://github.com/Margele/NinebotEnhance)原仓库已停止更新，目前部分新代码还未同步，后续可能考虑跟进。
+> [!WARNING]
+> [Margele/NinebotEnhance](https://github.com/Margele/NinebotEnhance)原仓库已停止更新，由于2.4寸仪表可玩性太低，决定停止维护。
 
 
 
